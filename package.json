@@ -20,5 +20,8 @@
   "homepage": "https://github.com/JMCampbell2021/notetaker#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
   }
 }

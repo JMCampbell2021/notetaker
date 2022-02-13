@@ -1,0 +1,24 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMCampbell2021/notetaker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMCampbell2021/notetaker/issues"
+  },
+  "homepage": "https://github.com/JMCampbell2021/notetaker#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

@@ -14,10 +14,12 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
 
+// Save and joins the note to the db.json
 app.get("/api/notes", (req,res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"))
 });
 
+// Add new note
 app.post('/api/notes', (req, res) => {
   const notes = JSON.parse(fs.readFileSync('./db/db.json'));
   const newNote = req.body;
@@ -27,6 +29,7 @@ app.post('/api/notes', (req, res) => {
   res.json(notes);
 });
 
+// Delete individual note
 app.delete('/api/notes/:id', (req, res) => {
   const notes = JSON.parse(fs.readFileSync('./db/db.json'));
   const deleteNote = notes.filter((removeNote) => removeNote.id !== req.params.id);
@@ -34,6 +37,7 @@ app.delete('/api/notes/:id', (req, res) => {
   res.json(deleteNote);
 })
 
+// Html front ends
 app.get("/", (req,res) => { 
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });

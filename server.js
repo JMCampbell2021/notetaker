@@ -19,7 +19,7 @@ app.get("/api/notes", (req,res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"))
 });
 
-// Add new note
+// Add new note 
 app.post('/api/notes', (req, res) => {
   const notes = JSON.parse(fs.readFileSync('./db/db.json'));
   const newNote = req.body;
